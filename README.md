@@ -80,7 +80,7 @@ Request Body JSON
 
 ### `Generation of start and date on tasks under certain project plan `
 
-GET Generate: `http://localhost:8080/plan/generate/{planid}`
+POST Generate: `http://localhost:8080/plan/generate/{planid}`
 
 ### `View project plan and its task in detailed`
 
