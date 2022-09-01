@@ -12,10 +12,10 @@ public class ProjectPlanResponseModel {
 	@JsonProperty("id")
 	private Integer id;
 	
-	@JsonProperty("project_plan_name")
+	@JsonProperty("plan_name")
 	private String projectplanname;
 	
-	@JsonProperty("project_plan_description")
+	@JsonProperty("plan_description")
 	private String projectplandesc;
 
 }

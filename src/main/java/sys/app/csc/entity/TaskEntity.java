@@ -40,13 +40,16 @@ public class TaskEntity implements Serializable {
 	private String taskstatus;
 	
 	@Column(name="task_duration")
-	private String taskduration;
+	private Integer taskduration;
 	
 	@Column(name="task_start")
 	private String startdate;
 	
 	@Column(name="task_end")
 	private String enddate;
+	
+	@Column(name="task_order")
+	private Integer taskorder;
 	
 	@JsonBackReference
 	@ManyToOne

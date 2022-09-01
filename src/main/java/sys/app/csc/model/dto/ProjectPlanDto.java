@@ -11,5 +11,6 @@ public class ProjectPlanDto {
 	private Integer id;	
 	private String projectplanname;	
 	private String projectplandesc;	
+	private String projectplanstatus;
 	private List<TaskDto> tasklist;
 }

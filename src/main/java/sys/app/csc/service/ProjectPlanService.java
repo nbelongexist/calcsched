@@ -1,5 +1,7 @@
 package sys.app.csc.service;
 
-public interface ProjectPlanService {
+import sys.app.csc.model.dto.ProjectPlanDto;
 
+public interface ProjectPlanService {
+	ProjectPlanDto save(ProjectPlanDto dto);
 }

@@ -17,4 +17,21 @@ public class TaskResponseModel {
 	
 	@JsonProperty("task_description")
 	private String taskdesc;
+	
+	
+	@JsonProperty("task_status")
+	private String taskstatus;	
+	
+	@JsonProperty("task_duration")
+	private Integer taskduration;	
+	
+	@JsonProperty("task_start")
+	private String startdate;	
+	
+	@JsonProperty("task_end")
+	private String enddate;	
+	
+	@JsonProperty("task_order")
+	private Integer taskorder;
 }
+

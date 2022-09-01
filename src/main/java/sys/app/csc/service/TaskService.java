@@ -1,5 +1,7 @@
 package sys.app.csc.service;
 
-public interface TaskService {
+import sys.app.csc.model.dto.TaskDto;
 
+public interface TaskService {
+	TaskDto save(TaskDto dto, Integer planid);
 }
