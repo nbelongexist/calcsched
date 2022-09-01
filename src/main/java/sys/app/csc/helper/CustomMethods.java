@@ -1,5 +1,9 @@
 package sys.app.csc.helper;
 
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -22,8 +26,19 @@ public class CustomMethods {
 		return modelmapper.map(source, target);
 	}
 	
-	public Long getDayDifference(String startdate, String todate) {
-		return null;
+	public String getEndDate(String startdate, Integer duration) {
+		
+		System.out.println("Date: "+startdate+" ||"+duration);
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		/*
+		 * LocalDateTime now = LocalDateTime.now(); Timestamp timestamp =
+		 * Timestamp.valueOf(now);
+		 */
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+		LocalDateTime startdatetime = LocalDateTime.parse(startdate, formatter);		
+		Timestamp timestamp = Timestamp.valueOf(startdatetime);		
+		Timestamp endtimestamp = new Timestamp(timestamp.getTime() + (1000 * 60 * 60 * duration));		
+		return sdf.format(endtimestamp);
 	}; 
 
 }

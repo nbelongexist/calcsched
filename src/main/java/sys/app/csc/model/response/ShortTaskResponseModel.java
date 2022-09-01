@@ -5,10 +5,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
-public class TaskResponseModel {
-	
+@Getter @Setter
+public class ShortTaskResponseModel {
 	@JsonProperty("id")
 	private Integer id;	
 	
@@ -32,8 +30,4 @@ public class TaskResponseModel {
 	
 	@JsonProperty("task_order")
 	private Integer taskorder;
-	
-	@JsonProperty("project_plan")
-	private ProjectPlanResponseModel projectplan;
 }
-

@@ -18,4 +18,7 @@ public class ProjectPlanResponseModel {
 	@JsonProperty("plan_description")
 	private String projectplandesc;
 
+	@JsonProperty("plan_status")
+	private String projectplanstatus;
+
 }

@@ -3,6 +3,7 @@ package sys.app.csc.service.implementation;
 import org.springframework.stereotype.Service;
 
 import lombok.AllArgsConstructor;
+import sys.app.csc.entity.ProjectPlanEntity;
 import sys.app.csc.entity.TaskEntity;
 import sys.app.csc.helper.CustomMethods;
 import sys.app.csc.model.dto.TaskDto;
@@ -21,8 +22,11 @@ public class TaskServiceImplementation implements TaskService {
 	@Override
 	public TaskDto save(TaskDto dto, Integer planid) {
 		ProjectPlanEntity pp = pprepo.findById(planid).orElse(new ProjectPlanEntity());
+		
 		dto.setTaskstatus("Created");
-		TaskEntity savedto = repo.save(helper.mapObj(dto, TaskEntity.class));
+		TaskEntity entity = helper.mapObj(dto, TaskEntity.class);
+		entity.setProjectplan(pp);
+		TaskEntity savedto = repo.save(entity);
 		return helper.mapObj(savedto, TaskDto.class);
 	}
 }

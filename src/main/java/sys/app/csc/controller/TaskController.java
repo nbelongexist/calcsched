@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import sys.app.csc.helper.CustomMethods;
 import sys.app.csc.model.dto.TaskDto;
@@ -13,6 +14,7 @@ import sys.app.csc.model.request.TaskRequestModel;
 import sys.app.csc.model.response.TaskResponseModel;
 import sys.app.csc.service.TaskService;
 
+@Tag(name = "Task", description="Task Service API")
 @RestController
 @AllArgsConstructor
 @RequestMapping("/task")

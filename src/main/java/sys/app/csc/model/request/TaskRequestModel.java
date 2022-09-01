@@ -18,6 +18,9 @@ public class TaskRequestModel {
 	@JsonProperty("task_duration")
 	private String taskduration;
 	
+	@JsonProperty("task_order")
+	private String taskorder;
+	
 	@JsonProperty("plan_id")
 	private Integer planid;
 

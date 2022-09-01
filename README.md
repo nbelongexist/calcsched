@@ -44,6 +44,53 @@ Builds the jar file for production.
 Make sure that build jar first before run this command.
 
 
+<br />
+<br />
+
+## Testing 
+
+### `First we need create a project plan`
+
+POST Save Project Plan: `http://localhost:8080/plan`
+
+Request Body JSON
+```
+{
+	"plan_name":"First Plan",
+	"plan_description":"First Plan Description"
+	
+}
+```
+
+### `Second we need create a task`
+
+POST Save Task: `http://localhost:8080/task`
+
+Request Body JSON
+```
+{
+	"task_name":"First Task",
+	"task_description":"First Task Description",
+	"task_duration":4, //provide duration - I use hour as duration
+	"task_order": 1, //provide order number tasks on the project plan - the best and simple setup for dependecies to some others tasks by organizing it by order
+	"plan_id":1 //the id plan project - the task will tagged under the plan
+}
+```
+
+
+### `Generation of start and date on tasks under certain project plan `
+
+GET Generate: `http://localhost:8080/plan/generate/{planid}`
+
+### `View project plan and its task in detailed`
+
+GET View Project Plan By ID: `http://localhost:8080/plan/{planid}`
+
+
+## SpringDocs OpenAPI
+
+Check it: `http://localhost:8080/swagger-ui.html`
+
 
 <br/>
 
